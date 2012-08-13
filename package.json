@@ -1,0 +1,15 @@
+{
+  "name": "object-mask",
+  "version": "0.0.1",
+  "description": "Copy an object based on a mask of allowed or denied properties",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wankdanker/node-object-mask.git"
+  },
+  "author": "Dan VerWeire",
+  "license": "MIT"
+}
