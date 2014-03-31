@@ -26,6 +26,9 @@ var allowMask2 = {
 	, c : true
 };
 
+var arrayAllowMask = ['a', 'b'];
+var arrayDenyMask = ['c'];
+
 var denyMask = {
 	a : true
 	, c : {
@@ -39,5 +42,6 @@ assert.deepEqual(mask(obj, allowMask2, true), { a: 1, c: {} });
 
 assert.deepEqual(mask(obj, denyMask), { b: 2, c: { d: 3, f: { g: 5 } } });
 
+assert.deepEqual(mask(obj, arrayAllowMask, true), { a: 1, b : 2 });
 
-
+assert.deepEqual(mask(obj, arrayDenyMask), { a: 1, b : 2 });

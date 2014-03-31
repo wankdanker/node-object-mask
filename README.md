@@ -34,7 +34,10 @@ the function
 mask(sourceObject, maskObject, allow);
 
 * _sourceObject_ - the object to copy
-* _maskObject_ - the object which defines properties to copy
+* _maskObject_ - the object or array which defines properties to copy
+	* if the _maskObject_ is an array then it is assumed that the _sourceObject_
+	will be a flat object and the values of the array will be used as the propery
+	names to mask
 * _allow_ - optional - true/false use allow mode (default is deny)
 
 example
@@ -88,6 +91,21 @@ var result = mask(obj, objMask);
   }
 };
 */
+
+//using an array mask
+
+var arrayMask = ["title", "length"];
+
+var result = mask(obj, arrayMask, true);
+
+/*
+{
+  "title" : "Test Item"
+  , "length" : 5
+};
+*/
+
+
 
 
 ```
