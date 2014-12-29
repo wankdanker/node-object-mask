@@ -32,7 +32,7 @@ function mask(src, msk, allow) {
 						dest[key].push(mask(val, msk[key], allow));
 					});
 				}
-				else if (typeof src[key] === 'object') {
+				else if (typeof src[key] === 'object' && src[key] !== null) {
 					dest[key] = mask(src[key], msk[key], allow);
 				}
 				else {
@@ -57,7 +57,7 @@ function mask(src, msk, allow) {
 						dest[key].push(mask(val, msk[key], allow));
 					});
 				}
-				else if (typeof src[key] === 'object') {
+				else if (typeof src[key] === 'object' && src[key] !== null) {
 					dest[key] = mask(src[key], msk[key], allow);
 				}
 				else {
