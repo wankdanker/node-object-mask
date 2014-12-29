@@ -1,6 +1,6 @@
 {
   "name": "object-mask",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Copy an object based on a mask of allowed or denied properties",
   "main": "index.js",
   "scripts": {
